@@ -4,7 +4,7 @@ dotenv.config()
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect('mongodb+srv://ritikdev:PRE%23012ZIP%21%40@cluster0.zosvr.mongodb.net/store?retryWrites=true&w=majority', {
+    const conn = await mongoose.connect(process.env.MONGO_URI, {
       useUnifiedTopology: true,
       useNewUrlParser: true,
       useCreateIndex: true,
